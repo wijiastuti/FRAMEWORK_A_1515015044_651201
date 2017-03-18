@@ -14,11 +14,12 @@ class BuatTableDosenMatakuliah extends Migration
     {
         Schema::create('dosen_matakuliah', function (Blueprint $table) {
             $table->increments('id');
+            $table->timestamps();
             $table->integer('dosen_id',false,true);
-            $table->foregin('dosen_id')->references('id')->on('dosen')->onDelete('cascade')->onUpdate('cascade');
-            $table->integer('matakuliah_id'),false,true);
-            $table->integer('matakuliah_id'),references('id')->on('matakuliah')->('cascade')->onUpdate('cascade');
-            $table->timestamps();        
+            $table->foreign('dosen_id')->references('id')->on('dosen')->onUpdate('cascade')->onDelete('cascade');
+            $table->integer('matakuliah_id',false,true);
+            $table->foreign('matakuliah_id')->references('id')->on('matakuliah')->onUpdate('cascade')->onDelete('cascade');
+        
         });
     }
 

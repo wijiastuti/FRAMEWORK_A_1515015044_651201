@@ -38,7 +38,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">NAMA : WIJI ASTUTI</div>
+                <div class="title">NAMA : WIJI AS</div>
                 <div class="title">NIM  : 1515015044</div>
             </div>
         </div>
