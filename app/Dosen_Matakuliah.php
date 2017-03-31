@@ -8,4 +8,10 @@ class Dosen_Matakuliah extends Model
 {
     protected $table = 'dosen_matakuliah';
     protected $fillable = ['matakuliah_id','dosen_id'];
+
+    //
+    public function dosen(){
+    	return $this->belongTo(Dosen::class);
+    }
+       
 }
